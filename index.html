@@ -1,27 +1,54 @@
-
-el arhchivo se llama index
-ol= viñeta
-ul =
-p = 
-img = imagen
-title= titulo
-a = 
-input = ingreso de datos para 
-h = encabezado, pueden ser varias h1 h2 h3 h4 h5 h6 y difiere las prioridades
-dip= etiqueta para separar contenidos
-nav = menu 
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>la pagina</title>
+    <title>Pagina de Jeremias Silva</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header> <h1>mi city</h1><nav></nav></header>
-    <main><img src="img/foto.jpg" alt="la imagen">
-    <p>aparece le vide</p>
+    <!-- Encabezado superior de la pagina: muestra el titulo principal visible al cargar -->
+    <header>
+        <div class="contenedor">
+            <h1>Pagina de Jeremias Silva</h1>
+        </div>
+    </header>
+
+    <!-- Contenido principal en el centro de la pagina -->
+    <main class="contenedor">
+        <!-- Seccion de perfil: organiza imagen y datos en dos columnas (o una en celular) -->
+        <section class="perfil">
+            <!-- Imagen principal de la infografia personal -->
+            <img src="foto.png" alt="Infografia personal del estudiante">
+
+            <!-- Tarjeta con datos mios -->
+            <article class="datos">
+                <!-- Nombre completo destacado -->
+                <h2>Jeremias Ariel Silva</h2>
+                <!-- Lista de datos personales visibles en el bloque derecho -->
+                <p><span class="etiqueta">Edad:</span> 20 años</p>
+                <p><span class="etiqueta">Cumpleanos:</span> 12/10</p>
+                <p><span class="etiqueta">Trabajo:</span> <a class="trabajo-link" href="https://www.instagram.com/sistema_flugbahn/" target="_blank" rel="noopener noreferrer">Flugbhan</a></p>
+                <div class="gustos-bloque">
+                    <p><span class="etiqueta">Gustos:</span></p>
+                    <ul class="gustos-lista">
+                        <li><span class="icono">🎵</span> Musica</li>
+                        <li><span class="icono">🎮</span> Juegos</li>
+                        <li><span class="icono">💻</span> Programacion</li>
+                        <li><span class="icono">📜</span> Filosofia</li>
+                        <li><span class="icono">📘</span> Libros</li>
+                    </ul>
+                </div>
+                <p><span class="etiqueta">Contacto:</span> jeremiasarielsilva@gmail.com</p>
+            </article>
+        </section>
     </main>
-    <footer>dudosos</footer>
+
+    <!-- Pie de pagina: informacion final que aparece abajo de todo -->
+    <footer>
+        <div class="contenedor">
+            <p>Hecho por Jeremias Ariel Silva - 2026</p>
+        </div>
+    </footer>
 </body>
 </html>

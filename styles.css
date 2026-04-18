@@ -1,0 +1,195 @@
+/* Variables de color generales usadas en toda la pagina */
+:root {
+    --fondo: #e8fbf8;
+    --superficie: #ffffff;
+    --principal: #0f8f8c;
+    --acento: #21c7be;
+    --texto: #1f3c3b;
+    --texto-secundario: #3f6664;
+    --borde-suave: #bdebe6;
+}
+
+/* Ajuste global para que padding y bordes no rompan el ancho de los elementos */
+* {
+    box-sizing: border-box;
+}
+
+/* Estilos base del fondo y tipografia de toda la pagina */
+body {
+    margin: 0;
+    font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+    background: linear-gradient(160deg, #f3fffd 0%, #d9f7f4 100%);
+    color: var(--texto);
+    line-height: 1.6;
+}
+
+/* Contenedor centrado para header, main y footer */
+.contenedor {
+    width: min(960px, 92%);
+    margin: 0 auto;
+}
+
+/* Encabezado superior con color principal y separador inferior */
+header {
+    background-color: var(--principal);
+    color: #ffffff;
+    padding: 2.25rem 0;
+    text-align: center;
+    border-bottom: 5px solid var(--acento);
+}
+
+/* Titulo grande visible en la parte superior */
+header h1 {
+    margin: 0;
+    font-size: 2.2rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+/* Subtitulo opcional del encabezado */
+header p {
+    margin: 0.5rem 0 0;
+    font-size: 1.08rem;
+    opacity: 0.95;
+}
+
+/* Caja principal del contenido (zona media de la pagina) */
+main {
+    background-color: var(--superficie);
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 14px;
+    border: 1px solid var(--borde-suave);
+    box-shadow: 0 10px 24px rgba(15, 143, 140, 0.16);
+}
+
+/* Distribucion de la seccion perfil: imagen a la izquierda y datos a la derecha */
+.perfil {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+/* Imagen personal con borde y sombra */
+.perfil img {
+    width: 100%;
+    max-width: 420px;
+    border-radius: 12px;
+    border: 4px solid var(--borde-suave);
+    justify-self: center;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* Tarjeta visual que contiene los datos personales */
+.datos {
+    background-color: #f2fffd;
+    border: 1px solid var(--borde-suave);
+    border-radius: 12px;
+    padding: 1.2rem 1.1rem;
+}
+
+/* Nombre del estudiante dentro de los datos */
+.datos h2 {
+    margin: 0 0 0.8rem;
+    color: var(--principal);
+    font-size: 1.7rem;
+}
+
+/* Texto de cada dato personal */
+.datos p {
+    margin: 0.7rem 0;
+    font-size: 1.03rem;
+    color: var(--texto-secundario);
+}
+
+/* Etiquetas destacadas: Edad, Trabajo, Contacto, etc. */
+.etiqueta {
+    color: var(--acento);
+    font-weight: 700;
+}
+
+/* Enlace del trabajo: visible y clickeable dentro del bloque de datos */
+.trabajo-link {
+    color: #0f8f8c;
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-color: #21c7be;
+    text-underline-offset: 3px;
+}
+
+.trabajo-link:hover {
+    color: #21c7be;
+}
+
+/* Bloque de gustos personales con estilo visual diferenciado */
+.gustos-bloque {
+    margin: 0.9rem 0;
+    padding: 0.7rem 0.85rem;
+    background: linear-gradient(90deg, #ecfffc 0%, #daf8f4 100%);
+    border-left: 4px solid #21c7be;
+    border-radius: 8px;
+}
+
+.gustos-bloque p {
+    margin: 0 0 0.35rem;
+}
+
+.gustos-lista {
+    margin: 0;
+    padding-left: 1.1rem;
+}
+
+.gustos-lista li {
+    margin: 0.2rem 0;
+    color: #295856;
+}
+
+.icono {
+    display: inline-block;
+    width: 1.4rem;
+}
+
+/* Pie de pagina fijo al final */
+footer {
+    background-color: #0b6f6c;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 1.1rem 0;
+    font-size: 0.95rem;
+    letter-spacing: 0.3px;
+}
+
+/* Ajuste para tipos de pantalla */
+@media (max-width: 768px) {
+    header {
+        padding: 1.5rem 0;
+    }
+
+    header h1 {
+        font-size: 1.55rem;
+    }
+
+    main {
+        margin: 1.2rem auto;
+        padding: 1.1rem;
+    }
+
+    .perfil {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 1.2rem;
+    }
+
+    .datos h2 {
+        font-size: 1.35rem;
+    }
+
+    .datos {
+        text-align: left;
+    }
+
+    .datos p {
+        font-size: 0.98rem;
+    }
+}
